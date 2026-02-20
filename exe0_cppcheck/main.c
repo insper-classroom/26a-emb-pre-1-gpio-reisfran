@@ -3,14 +3,13 @@
 
 #define NUM_ELEMENTS 5
 
-int multiplyNumbers(int x, int y) {
+void multiplyNumbers(int x, int y) {
     int product = x * y;
-    return product;
 }
 
 int main(void) {
     int a= 2, b = 5; //uninitvar, legacyUninitvar
-    int result = multiplyNumbers(a, b);
+    multiplyNumbers(a, b);
 
     int arr[NUM_ELEMENTS];
     for(int i = 0; i < NUM_ELEMENTS; i++) { //arrayIndexOutOfBounds
