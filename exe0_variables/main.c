@@ -1,18 +1,20 @@
 #include "stdio.h"
 
-void foo(int x) {
-    x = x + 1; // acessa variavel global
+static void foo(int *p) {
+    *p = *p + 1; 
 }
 
-void main(void) {
+int main(void) {
     while (1) {
         int a = 5;
         
         int b = 0;
-        foo(a);
+        foo(&a);
         
         if (a > 5) {
             b = 1;
         }
     }
+
+    return 0;
 }
