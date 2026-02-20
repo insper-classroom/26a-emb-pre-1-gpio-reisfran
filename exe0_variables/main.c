@@ -1,7 +1,5 @@
 #include "stdio.h"
 
-int a; // var global
-
 void foo(void) {
     a = a + 1; // acessa variavel global
 }
