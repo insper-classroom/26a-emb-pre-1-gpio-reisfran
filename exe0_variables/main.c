@@ -14,7 +14,10 @@ int main(void) {
         if (a > 5) {
             b = 1;
         }
+        
+        printf("%d",b);
     }
+
 
     return 0;
 }
