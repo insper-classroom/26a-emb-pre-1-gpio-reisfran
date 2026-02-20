@@ -1,7 +1,6 @@
 #include "stdio.h"
 
-int a = 0; // var global
-int b = 0; // var global
+int a; // var global
 
 void foo(void) {
     a = a + 1; // acessa variavel global
@@ -9,6 +8,9 @@ void foo(void) {
 
 void main(void) {
     while (1) {
+        a = 0;
+        
+        int b = 0;
         foo();
         
         if (a > 5) {
