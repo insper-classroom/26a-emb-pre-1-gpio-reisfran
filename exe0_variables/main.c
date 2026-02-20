@@ -1,15 +1,15 @@
 #include "stdio.h"
 
-void foo(void) {
-    a = a + 1; // acessa variavel global
+void foo(int x) {
+    x = x + 1; // acessa variavel global
 }
 
 void main(void) {
     while (1) {
-        a = 5;
+        int a = 5;
         
         int b = 0;
-        foo();
+        foo(a);
         
         if (a > 5) {
             b = 1;
