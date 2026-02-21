@@ -32,10 +32,10 @@ void seven_seg_init() {
 }
 
 void seven_seg_display(int value) {
-    int value = bits[value];
+    int intervalo = bits[value];
     for (int i = 0; i < 7; i++) {
         int gpio = FIRST_GPIO + i;
-        int bit = (value >> i) & 1;
+        int bit = (intervalo >> i) & 1;
         gpio_put(gpio, bit);
     }
 }
@@ -43,7 +43,6 @@ void seven_seg_display(int value) {
 int main() {
     stdio_init_all();
     // int aux = 0;
-
     // BUTTON_GPIO = FIRST_GPIO + 7;
 
     int cnt = 0;
